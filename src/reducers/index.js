@@ -4,6 +4,7 @@ import {
   APPLY_NUMBER,
   CHANGE_OPERATION,
   CLEAR_DISPLAY,
+  CLEAR_MEMORY,
   SET_MEMORY,
 } from "./../actions";
 
@@ -50,6 +51,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         total: 0,
+      };
+
+    case CLEAR_MEMORY:
+      return {
+        ...state,
+        memory: 0,
       };
 
     case SET_MEMORY:
