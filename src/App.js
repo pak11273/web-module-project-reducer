@@ -3,18 +3,21 @@ import "./App.css";
 import React, { useReducer } from "react";
 import reducer, { initialState } from "./reducers";
 
-import { ADD_ONE } from "./actions";
 import CalcButton from "./components/CalcButton";
 import TotalDisplay from "./components/TotalDisplay";
+import { addOne } from "./actions";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const handleClick = () => {
+    dispatch(addOne());
+  };
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
-        <a className="navbar-brand" href="#">
-          <img width="40px" src="./Lambda-Logo-Red.png" /> Lambda Reducer
-          Challenge
+        <a className="navbar-brand" href="/">
+          <img width="40px" src="./Lambda-Logo-Red.png" alt="something" />{" "}
+          Lambda Reducer Challenge
         </a>
       </nav>
 
@@ -39,7 +42,7 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={1} />
+              <CalcButton value={1} onClick={handleClick} />
               <CalcButton value={2} />
               <CalcButton value={3} />
             </div>
