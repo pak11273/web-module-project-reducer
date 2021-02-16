@@ -100,17 +100,17 @@ export const initialState = {
 
 > _Now let's add in the clear display feature. For this, you will be doing every part of the reducer / action process._
 
-- [ ] Within `./reducers/index,` add in a case for `CLEAR_DISPLAY`. Clear display should set the total value in state to 0.
-- [ ] Within `./actions/index,` add in an action creator and action string constant to for `CLEAR_DISPLAY`. Make sure to import that constant into your reducer file.
-- [ ] Within `App.js,` import in your clearDisplay action creator.
-- [ ] Create and connect an event handler to the "CE" button that dispatches your clearDisplay action creator.
-- [ ] **Test** that your clearDisplay button works as expected.
+- [x] Within `./reducers/index,` add in a case for `CLEAR_DISPLAY`. Clear display should set the total value in state to 0.
+- [x] Within `./actions/index,` add in an action creator and action string constant to for `CLEAR_DISPLAY`. Make sure to import that constant into your reducer file.
+- [x] Within `App.js,` import in your clearDisplay action creator.
+- [x] Create and connect an event handler to the "CE" button that dispatches your clearDisplay action creator.
+- [x] **Test** that your clearDisplay button works as expected.
 
 #### Task 8: Add in memory functions from scratch.
 
 > _Congratulations! You have gone through the entire process for adding an action to your app! Now, see if you can follow the same process (reducer case => action creator => UI connection) for the following button functions. IN EACH CASE, ALWAYS TEST YOU FEATURE WORKS BEFORE PROCEEDING FORWARD._
 
-- [ ] When `M+` is pressed, the state's current memory value should be set to the current total value. Test by seeing the result of memory in the UI.
+- [x] When `M+` is pressed, the state's current memory value should be set to the current total value. Test by seeing the result of memory in the UI.
 - [ ] When `MF` is pressed, the state's current total value should be set to the current total value applied to the current memory value (See the APPLY_NUMBER case). Test by adding a value to memory and then seeing if the total updates correctly when pressed.
 - [ ] When `MC` is pressed, the state's current memory value should be set to zero. Test by adding a value to memory and then seeing the memory value reset to zero when pressed.
 
