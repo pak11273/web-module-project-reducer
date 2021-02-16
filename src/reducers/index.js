@@ -1,5 +1,6 @@
 import {
   ADD_ONE,
+  APPLY_MEMORY,
   APPLY_NUMBER,
   CHANGE_OPERATION,
   CLEAR_DISPLAY,
@@ -55,6 +56,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         memory: state.total,
+      };
+
+    case APPLY_MEMORY:
+      return {
+        ...state,
+        total: calculateResult(state.total, state.memory, state.operation),
       };
 
     default:

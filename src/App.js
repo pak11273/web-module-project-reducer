@@ -2,6 +2,7 @@ import "./App.css";
 
 import React, { useReducer } from "react";
 import {
+  applyMemory,
   applyNumber,
   changeOperation,
   clearDisplay,
@@ -29,6 +30,10 @@ function App() {
   const handleSetMemory = () => {
     dispatch(setMemory());
   };
+
+  const handleApplyMemory = () => {
+    dispatch(applyMemory());
+  };
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -54,7 +59,7 @@ function App() {
 
             <div className="row">
               <CalcButton value={"M+"} onClick={() => handleSetMemory()} />
-              <CalcButton value={"MR"} />
+              <CalcButton value={"MR"} onClick={() => handleApplyMemory()} />
               <CalcButton value={"MC"} />
             </div>
 
